@@ -19,6 +19,7 @@ namespace Password_gen
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
             string idk = "";
             string output = "";
             if (checkBox1.Checked) { idk += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; } //Znaky zapisuji přímo pro snadnější editaci.
@@ -32,7 +33,8 @@ namespace Password_gen
             {
                 output += idk[rng.Next(1, idk.Length)]; // Ke stringu přistupuji jako k char poli. Jiné efektivní využití pro pole jsem nenašel 
             }
-            MessageBox.Show("Heslo: "+output);
+            //MessageBox.Show("Heslo: "+output);
+            textBox1.Text = output;
         }
     }
 }
