@@ -21,7 +21,7 @@ namespace Password_gen
         {
             string idk = "";
             string output = "";
-            if (checkBox1.Checked) { idk += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; }
+            if (checkBox1.Checked) { idk += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; } //Znaky zapisuji přímo pro snadnější editaci.
             if (checkBox2.Checked) { idk += "abcdefghijklmnopqrstuvwxyz"; }
             if (checkBox3.Checked) { idk += "0123456789"; }
             if (checkBox4.Checked) { idk += "±!@#$%^&*()_+-=§£¢§[]{}"; }
@@ -30,7 +30,7 @@ namespace Password_gen
             Random rng = new Random();
             for(int i = 0;i<numb;i++)
             {
-                output += idk[rng.Next(1, idk.Length)];
+                output += idk[rng.Next(1, idk.Length)]; // Ke stringu přistupuji jako k char poli. Jiné efektivní využití pro pole jsem nenašel 
             }
             MessageBox.Show("Heslo: "+output);
         }
