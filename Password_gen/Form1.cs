@@ -33,7 +33,6 @@ namespace Password_gen
                 output += idk[rng.Next(1, idk.Length)];
             }
             MessageBox.Show("Heslo: "+output);
-            //Clipboard.SetText(output);
         }
     }
 }
